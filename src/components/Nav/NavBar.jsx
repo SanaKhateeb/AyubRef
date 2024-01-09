@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import AppBar from '@mui/material/AppBar'
-import Drawer from '@mui/material/Drawer'
+import { AppBar, Toolbar, IconButton } from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu'
+import styled from '@emotion/styled'
 
 
 export const NavBar = ({navLinks}) => {
@@ -11,6 +12,12 @@ export const NavBar = ({navLinks}) => {
     }
 
     return (
-        <h1>Here is a test</h1>
+        <AppBar component='nav'>
+            <Toolbar>
+                <IconButton color='inherit' edge="start" sx={{mr: 2}}>
+                    <MenuIcon />
+                </IconButton>
+            </Toolbar>
+        </AppBar>
     )
 }
