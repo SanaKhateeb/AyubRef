@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { AppBar, Toolbar, IconButton, Drawer, Typography, ListItem, ListItemButton, ListItemText, Box, Divider, List } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-import styled from '@emotion/styled'
 
 
-export const NavBar = ({navLinks}) => {
+export const NavBar = ({ navLinks }) => {
     const [drawerOpen, setDrawerOpen] = useState(false)
 
     const handleDrawerToggle = () => {
@@ -12,7 +11,7 @@ export const NavBar = ({navLinks}) => {
     }
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center'}}>
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant='h6'>
                 LOGO
             </Typography>
@@ -34,10 +33,13 @@ export const NavBar = ({navLinks}) => {
             <Toolbar>
                 <IconButton
                     onClick={handleDrawerToggle}
-                    color='inherit' edge="start" sx={{mr: 2}}
+                    color='inherit' edge="start" sx={{ mr: 2 }}
                 >
                     <MenuIcon />
                 </IconButton>
+                {!drawerOpen && <Typography variant='h6'>
+                    LOGO
+                </Typography>}
             </Toolbar>
             <nav>
                 <Drawer
