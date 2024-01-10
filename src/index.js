@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <NavBar />
+      <NavBar navLinks={['test']}/>
       {/* TODO: Placeholder, will add routes */}
       <MainPage />
     </Box>
